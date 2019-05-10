@@ -49,10 +49,10 @@ class GenderChart extends React.Component {
     return (
       <div class="c-content c-content--wide">
         <h2 class="c-content__title c-content__title--sm">Kui palju teenivad mehed rohkem kui naised?</h2>
+        <p>Sinu vastus ei olnud kahjuks õige.</p>
+        <p>Mehed teenivad Eestis naistest 25% rohkem.</p>
+        <p>Palgalõhega seotud statistika leiad <a href="http://pub.stat.ee/px-web.2001/Database/Rahvastik/databasetree.asp">Eesti Statistikaameti andmebaasist</a></p>
         <div class="c-chart">
-      <button className="btn waves-effect waves-light" type="submit" name="action">
-        <i className="material-icons right">replay</i>
-      </button>
         <Moment format="YYYY-MM" style={{ 
             fontSize: '5rem', 
             position: 'absolute', 

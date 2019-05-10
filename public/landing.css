@@ -68,7 +68,7 @@ img {
   align-items: center;
   position: absolute;
   top: 30px;
-  left: 30px;
+  left: 20px;
 }
 .c-logo__img {
   width: 50px;
@@ -104,8 +104,20 @@ img {
   text-align: center;
 }
 .c-content__title--sm {
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 20px;
+}
+.c-content {
+  text-align: center;
+  color: #fff;
+}
+.c-content p {
+  font-size: 24px;
+  line-height: 1.4;
+}
+.c-content p a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .c-btn-group {
@@ -131,12 +143,13 @@ img {
   border: 0;
   outline: 0;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+  font-weight: 700;
 }
 .c-btn--primary {
-  background-color: #5AB1BB;
+  background-color: #4198A2;
   color: #fff;
 }
 .c-btn--primary:hover {

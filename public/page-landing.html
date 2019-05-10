@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Racing charts</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+  <div class="c-logo">
+    <img src="img/logo.svg" alt="Racing Charts" class="c-logo__img">
+    <span class="c-logo__text">Racing Charts</span>
+  </div>
+
+  <div class="c-content step show" id="step-1">
+    <h2 class="c-content__title">Kui palju sa tead Eestist?</h2>
+    <div class="c-btn-group">
+      <button class="c-btn c-btn--primary" onclick="showStep2()">Väga hästi</button>
+      <button class="c-btn c-btn--primary" onclick="showStep2()">Keskmiselt</button>
+      <button class="c-btn c-btn--primary" onclick="showStep2()">Ei tea eriti</button>
+    </div>
+  </div>
+
+  <div class="c-content step" id="step-2">
+    <h2 class="c-content__title">Mis teema sind huvitab?</h2>
+    <div class="c-btn-group">
+      <button class="c-btn c-btn--choice" onclick="showStep31()">
+        <img src="img/money-bag.svg" alt="">
+        <span>Palgateemad</span>
+      </button>
+      <button class="c-btn c-btn--choice" onclick="showStep32()">
+        <img src="img/employees.svg" alt="">
+        <span>Meeste-naiste võrdsus</span>
+      </button>
+      <button class="c-btn c-btn--choice" onclick="showStep33()">
+        <img src="img/population.svg" alt="">
+        <span>Populatsioon</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="c-content step" id="step-3-1">
+    <h2 class="c-content__title">Mitu korda erineb keskmine palk Tallinnas ja Ida-Virumaal?</h2>
+    <div class="c-btn-group c-btn-group--column c-btn-group--max">
+      <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/salary'">1,1</button>
+      <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/salary'">1,3</button>
+      <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/salary'">1,5</button>
+    </div>
+  </div>
+  <div class="c-content step" id="step-3-2">
+    <h2 class="c-content__title">Kui palju teenivad mehed rohkem kui naised?</h2>
+    <div class="c-btn-group c-btn-group--column c-btn-group--max">
+      <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/gendergap'">15%</button>
+      <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/gendergap'">25%</button>
+      <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/gendergap'">ei teenigi rohkem</button>
+    </div>
+  </div>
+  <div class="c-content step" id="step-3-3">
+    <h2 class="c-content__title">Millises maakonnas on elanike arv viimase 10a jooksul kõige rohkem kasvanud?</h2>
+    <div class="c-btn-group c-btn-group--column c-btn-group--max">
+      <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/population'">Harjumaa</button>
+      <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/population'">Viljandimaa</button>
+      <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/population'">Pärnumaa</button>
+    </div>
+  </div>
+
+  <script>
+    function showStep2() {
+      var currentStep = document.getElementById("step-1");
+      var nextStep = document.getElementById("step-2");
+      currentStep.classList.remove("show");
+      nextStep.classList.add("show");
+    }
+    function showStep31() {
+      var currentStep = document.getElementById("step-2");
+      var nextStep = document.getElementById("step-3-1");
+      currentStep.classList.remove("show");
+      nextStep.classList.add("show");
+    }
+    function showStep32() {
+      var currentStep = document.getElementById("step-2");
+      var nextStep = document.getElementById("step-3-2");
+      currentStep.classList.remove("show");
+      nextStep.classList.add("show");
+    }
+    function showStep33() {
+      var currentStep = document.getElementById("step-2");
+      var nextStep = document.getElementById("step-3-3");
+      currentStep.classList.remove("show");
+      nextStep.classList.add("show");
+    }
+  </script>
+
+</body>
+</html>
