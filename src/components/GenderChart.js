@@ -47,7 +47,9 @@ class GenderChart extends React.Component {
 
   render() {
     return (
-      <div style={{ marginTop: '2rem' }}>
+      <div class="c-content c-content--wide">
+        <h2 class="c-content__title c-content__title--sm">Kui palju teenivad mehed rohkem kui naised?</h2>
+        <div class="c-chart">
       <button className="btn waves-effect waves-light" type="submit" name="action">
         <i className="material-icons right">replay</i>
       </button>
@@ -92,7 +94,7 @@ class GenderChart extends React.Component {
           }}
           rootProps={{ 'data-testid': '1' }}
         />
-      </div>
+        </div></div>
     )
   }
 };

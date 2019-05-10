@@ -50,7 +50,9 @@ class PopulationChart extends React.Component {
   render() {
     console.log(this.state.currentDate)
     return (
-      <div style={{ marginTop: '2rem' }}>
+      <div class="c-content c-content--wide">
+        <h2 class="c-content__title c-content__title--sm">Millises maakonnas on elanike arv viimase 10a jooksul kõige rohkem kasvanud?</h2>
+        <div class="c-chart">
         <Moment format="YYYY-MM" style={{ 
             fontSize: '5rem', 
             position: 'absolute', 
@@ -93,7 +95,7 @@ class PopulationChart extends React.Component {
           }}
           rootProps={{ 'data-testid': '1' }}
         />
-      </div>
+        </div></div>
     )
   }
 };

@@ -1,0 +1,178 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Page */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #333;
+  background: url(img/bg02.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1, h2, h3, button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c-logo {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.c-logo__img {
+  width: 50px;
+  margin-right: 10px;
+}
+.c-logo__text {
+  font-size: 30px;
+  color: #33312E;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.c-content {
+  width: 100%;
+  max-width: 800px;
+  padding: 50px;
+  background-color: rgba(30, 21, 42, .5);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, .1);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.c-content--wide {
+  max-width: 1200px;
+}
+.c-content__title {
+  margin-bottom: 40px;
+  font-size: 46px;
+  line-height: 1.2;
+  color: #fff;
+  text-align: center;
+}
+.c-content__title--sm {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.c-btn-group {
+  display: flex;
+  justify-content: center;
+}
+.c-btn-group--max {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.c-btn-group .c-btn {
+  margin: 0 10px;
+}
+.c-btn-group--column {
+  flex-direction: column;
+}
+.c-btn-group--column .c-btn {
+  margin: 5px 0;
+}
+
+.c-btn {
+  padding: 15px 30px;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.c-btn--primary {
+  background-color: #5AB1BB;
+  color: #fff;
+}
+.c-btn--primary:hover {
+  background-color: #277E88;
+}
+
+.c-btn--choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+}
+.c-btn--choice img {
+  display: block;
+  height: 100px;
+  width: auto;
+  margin-bottom: 15px;
+}
+.c-btn--choice span {
+  display: block;
+}
+.c-btn--choice:hover {
+  background-color: #FFFFD8;
+}
+
+.c-chart {
+  margin-top: 30px;
+}
+
+.step {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.step.show {
+  opacity: 1;
+  z-index: 2;
+}
