@@ -1,19 +1,21 @@
 import React from 'react';
 import { Chart } from 'react-google-charts';
 import Moment from 'react-moment';
+import m from 'moment';
 
-import Data from '../dataSets/gendergap.json';
+import Data from '../dataSets/MEGA.json';
 
 class GenderChart extends React.Component {
   state = {
     chartData: {},
     arrayLength: Object.keys(Data).length,
     generation: 0,
-    currentDate: ''
+    currentDate: '2006'
   }
 
   componentDidMount() {
     this.generateData();
+    
   };
 
   generateData = () => {
@@ -28,7 +30,7 @@ class GenderChart extends React.Component {
     setInterval(() => {
       if (this.state.generation < this.state.arrayLength) {
         let tabLine = arrValue[this.state.generation];
-        tabLine.unshift(['Maakond', 'Palk',  
+        tabLine.unshift(['Country', 'Percentage',  
           { 
             sourceColumn: 3 ,
             role: 'annotation',
@@ -38,9 +40,9 @@ class GenderChart extends React.Component {
             role: 'style'
           }
         ]); 
-        let date = new Date();
-        date.setMilliseconds(arrKeys[this.state.generation]);
-        this.setState({ generation: this.state.generation + 1, chartData: tabLine, currentDate: date })
+        var day = m.unix(arrKeys[this.state.generation]).utc();
+
+        this.setState({ generation: this.state.generation + 1, chartData: tabLine, currentDate: day })
       }
     }, 1200)
   };
@@ -48,21 +50,19 @@ class GenderChart extends React.Component {
   render() {
     return (
       <div style={{ marginTop: '2rem' }}>
-      <button className="btn waves-effect waves-light" type="submit" name="action">
-        <i className="material-icons right">replay</i>
-      </button>
-        <Moment format="YYYY-MM" style={{ 
-            fontSize: '5rem', 
+        <Moment format="YYYY" style={{ 
+            fontSize: '11rem', 
             position: 'absolute', 
             zIndex: '99',
-            top: '26rem',
-            right: '5rem' 
+            top: '21rem',
+            right: '3.5rem',
+            color: '#3c3c3c'
              }}>
           {this.state.currentDate}
         </Moment>
         <Chart
           width={'100%'}
-          height={'500px'}
+          height={'550px'}
           chartType="BarChart"
           loader={<div>Loading Chart</div>}
           data={this.state.chartData}
@@ -79,16 +79,19 @@ class GenderChart extends React.Component {
               startup: true,
             },
             vAxis: {
-              //title: 'City',
             },
             hAxis: {
               viewWindow: {
-                max: 35,
+                max: 0.35,
               },
+              format: 'percent',
+              title: 'Gender pay gap (Source: Eurostat)',
             },
             legend: { position: 'none' },
             enableInteractivity: false,
-            bars: 'horizontal'
+            annotations: {
+              alwaysOutside: true
+            }
           }}
           rootProps={{ 'data-testid': '1' }}
         />

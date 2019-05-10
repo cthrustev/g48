@@ -1,8 +1,9 @@
 import React from 'react';
 import { Chart } from 'react-google-charts';
 import Moment from 'react-moment';
+import m from 'moment';
 
-import Data from '../dataSets/salary_utf8.json';
+import Data from '../dataSets/salaryFinale.json';
 
 class SalaryChart extends React.Component {
   state = {
@@ -39,15 +40,14 @@ class SalaryChart extends React.Component {
           }
         ]);
         
-        let date = new Date();
-        date.setMilliseconds(arrKeys[this.state.generation]);
-        this.setState({ generation: this.state.generation + 1, chartData: tabLine, currentDate: date })
+        var day = m.unix(arrKeys[this.state.generation]).utc();
+
+        this.setState({ generation: this.state.generation + 1, chartData: tabLine, currentDate: day })
       }
     }, 300)
   };
 
   render() {
-    console.log(this.state.currentDate)
     return (
       <div style={{ marginTop: '2rem' }}>
         <Moment format="YYYY-MM" style={{ 
@@ -60,14 +60,14 @@ class SalaryChart extends React.Component {
           {this.state.currentDate}
         </Moment>
         <Chart
-          width={'100%'}
+          width={'85%'}
           height={'500px'}
           chartType="BarChart"
           loader={<div>Loading Chart</div>}
           data={this.state.chartData}
           options={{
             chartArea: {
-              width: '75%',
+              width: '70%',
               height: '80%',
             },
             colors: ['#8e0152', '#276419'],

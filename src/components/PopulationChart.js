@@ -1,8 +1,9 @@
 import React from 'react';
 import { Chart } from 'react-google-charts';
 import Moment from 'react-moment';
+import m from 'moment';
 
-import Data from '../dataSets/population_utf.json';
+import Data from '../dataSets/populationFinale.json';
 
 class PopulationChart extends React.Component {
   state = {
@@ -39,19 +40,19 @@ class PopulationChart extends React.Component {
           }
         ]);
         
-        let date = new Date();
-        date.setMilliseconds(arrKeys[this.state.generation]);
+        var day = m.unix(arrKeys[this.state.generation]).utc();
 
-        this.setState({ generation: this.state.generation + 1, chartData: tabLine, currentDate: date })
+        this.setState({ generation: this.state.generation + 1, chartData: tabLine, currentDate: day })
       }
     }, 300)
   };
 
   render() {
-    console.log(this.state.currentDate)
     return (
       <div style={{ marginTop: '2rem' }}>
-        <Moment format="YYYY-MM" style={{ 
+        <Moment 
+          format="YYYY"
+          style={{ 
             fontSize: '5rem', 
             position: 'absolute', 
             zIndex: '99',
@@ -68,7 +69,7 @@ class PopulationChart extends React.Component {
           data={this.state.chartData}
           options={{
             chartArea: {
-              width: '75%',
+              width: '70%',
               height: '80%',
             },
             colors: ['#8e0152', '#276419'],
