@@ -47,8 +47,9 @@ class GenderChart extends React.Component {
 
   render() {
     return (
-      <div class="c-content c-content--wide">
-        <h2 class="c-content__title c-content__title--sm"><a href="#">Kui palju teenivad mehed rohkem kui naised?</a></h2>
+      <div class="c-content c-content--wide c-content--chart">
+        <h2 class="c-content__title c-content__title--sm"><a href="http://localhost:3000/page-end.html">Gender pay gap (%)</a></h2>
+        <p><small>European countries, 2006-2017</small></p>
         <div class="c-chart">
         <Moment format="YYYY-MM" style={{ 
             fontSize: '5rem', 

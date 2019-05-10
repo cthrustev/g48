@@ -85,7 +85,7 @@ img {
   width: 100%;
   max-width: 800px;
   padding: 50px;
-  background-color: rgba(30, 21, 42, .5);
+  background-color: rgba(30, 21, 42, .7);
   box-shadow: 10px 10px 30px rgba(0, 0, 0, .1);
   border-radius: 4px;
   position: absolute;
@@ -122,6 +122,36 @@ img {
 .c-content p a {
   color: #fff;
   text-decoration: underline;
+}
+.c-content--text p {
+  margin-top: 25px;
+  text-align: left;
+}
+.c-content--text p strong {
+  font-weight: 700;
+}
+.c-content--text p.small {
+  font-size: 18px;
+}
+.c-content--text .answer {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, .6);
+  border-radius: 4px;
+  color: #111;
+  font-weight: 700;
+  font-size: 28px;
+}
+.c-content--chart {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  background-color: #fff;
+}
+.c-content--chart .c-content__title,
+.c-content--chart .c-content__title a,
+.c-content--chart p {
+  color: #111;
 }
 
 .c-btn-group {
@@ -181,8 +211,8 @@ img {
   background-color: #FFFFD8;
 }
 
-.c-chart {
-  margin-top: 30px;
+.text-red {
+  color: #ff0000;
 }
 
 .step {
