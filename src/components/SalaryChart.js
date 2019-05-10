@@ -49,7 +49,9 @@ class SalaryChart extends React.Component {
 
   render() {
     return (
-      <div style={{ marginTop: '2rem' }}>
+      <div class="c-content c-content--wide">
+        <h2 class="c-content__title c-content__title--sm">Mitu korda erineb keskmine palk Tallinnas ja Ida-Virumaal?</h2>
+        <div class="c-chart">
         <Moment format="YYYY-MM" style={{ 
             fontSize: '5rem', 
             position: 'absolute', 
@@ -92,7 +94,7 @@ class SalaryChart extends React.Component {
           }}
           rootProps={{ 'data-testid': '1' }}
         />
-      </div>
+        </div></div>
     )
   }
 };

@@ -94,7 +94,7 @@ class PopulationChart extends React.Component {
           }}
           rootProps={{ 'data-testid': '1' }}
         />
-      </div>
+        </div>
     )
   }
 };
