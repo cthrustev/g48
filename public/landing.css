@@ -103,16 +103,20 @@ img {
   color: #fff;
   text-align: center;
 }
+.c-content__title a {
+  color: #fff;
+  text-decoration: none;
+}
 .c-content__title--sm {
   font-size: 40px;
   margin-bottom: 20px;
 }
 .c-content {
   text-align: center;
-  color: #fff;
 }
 .c-content p {
   font-size: 24px;
+  color: #fff;
   line-height: 1.4;
 }
 .c-content p a {
@@ -139,11 +143,11 @@ img {
 }
 
 .c-btn {
-  padding: 15px 30px;
+  padding: 20px 30px;
   border: 0;
   outline: 0;
   border-radius: 4px;
-  font-size: 22px;
+  font-size: 24px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   font-weight: 700;

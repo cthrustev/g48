@@ -48,10 +48,7 @@ class GenderChart extends React.Component {
   render() {
     return (
       <div class="c-content c-content--wide">
-        <h2 class="c-content__title c-content__title--sm">Kui palju teenivad mehed rohkem kui naised?</h2>
-        <p>Sinu vastus ei olnud kahjuks õige.</p>
-        <p>Mehed teenivad Eestis naistest 25% rohkem.</p>
-        <p>Palgalõhega seotud statistika leiad <a href="http://pub.stat.ee/px-web.2001/Database/Rahvastik/databasetree.asp">Eesti Statistikaameti andmebaasist</a></p>
+        <h2 class="c-content__title c-content__title--sm"><a href="#">Kui palju teenivad mehed rohkem kui naised?</a></h2>
         <div class="c-chart">
         <Moment format="YYYY-MM" style={{ 
             fontSize: '5rem', 
