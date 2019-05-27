@@ -49,12 +49,12 @@ class GenderChart extends React.Component {
 
   render() {
     return (
-      <div style={{ marginTop: '2rem' }}>
-        <Moment format="YYYY" style={{ 
-            fontSize: '11rem', 
+      <div className="c-content">
+        <Moment format="YYYY-MM" style={{ 
+            fontSize: '5rem', 
             position: 'absolute', 
             zIndex: '99',
-            top: '21rem',
+            top: '30rem',
             right: '3.5rem',
             color: '#3c3c3c'
              }}>
@@ -95,6 +95,7 @@ class GenderChart extends React.Component {
           }}
           rootProps={{ 'data-testid': '1' }}
         />
+        <button className="c-btn c-btn--primary" onClick={() => this.props.jumpToStep(6)} style={{ margin: '0.5rem', padding: '10px 20px', fontSize: '16px'}}> Next </button>
         </div>
     )
   }

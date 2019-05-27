@@ -1,0 +1,9 @@
+chart top html
+
+      <div class="c-content c-content--wide c-content--chart">
+        <h2 class="c-content__title c-content__title--sm"><a href="http://localhost:3000/page-end.html">Gender pay gap (%)</a></h2>
+        <p><small>European countries, 2006-2017</small></p>
+        <div class="c-chart">
+
+
+

@@ -14,28 +14,28 @@
   </div>
 
   <div class="c-content step show" id="step-1">
-    <h2 class="c-content__title">Kui palju sa tead Eestist?</h2>
+    <h2 class="c-content__title">How much do You know about Estonia?</h2>
     <div class="c-btn-group">
-      <button class="c-btn c-btn--primary" onclick="showStep2()">Väga hästi</button>
-      <button class="c-btn c-btn--primary" onclick="showStep2()">Keskmiselt</button>
-      <button class="c-btn c-btn--primary" onclick="showStep2()">Ei tea eriti</button>
+      <button class="c-btn c-btn--primary" onclick="showStep2()">Everything</button>
+      <button class="c-btn c-btn--primary" onclick="showStep2()">Same as anyone</button>
+      <button class="c-btn c-btn--primary" onclick="showStep2()">Not much</button>
     </div>
   </div>
 
   <div class="c-content step" id="step-2">
-    <h2 class="c-content__title">Mis teema sind huvitab?</h2>
+    <h2 class="c-content__title">What are You interested in?</h2>
     <div class="c-btn-group">
-      <button class="c-btn c-btn--choice" onclick="showStep31()">
+      <button class="c-btn c-btn--choice" onclick="showStep32()">
         <img src="img/money-bag.svg" alt="">
-        <span>Palgateemad</span>
+        <span>Average salary</span>
       </button>
       <button class="c-btn c-btn--choice" onclick="showStep32()">
         <img src="img/employees.svg" alt="">
-        <span>Meeste-naiste võrdsus</span>
+        <span>Gender pay gap</span>
       </button>
-      <button class="c-btn c-btn--choice" onclick="showStep33()">
+      <button class="c-btn c-btn--choice" onclick="showStep32()">
         <img src="img/population.svg" alt="">
-        <span>Populatsioon</span>
+        <span>Population</span>
       </button>
     </div>
   </div>
@@ -49,11 +49,11 @@
     </div>
   </div>
   <div class="c-content step" id="step-3-2">
-    <h2 class="c-content__title">Kui palju teenivad mehed rohkem kui naised?</h2>
+    <h2 class="c-content__title">How much more do men earn than women in Estonia?</h2>
     <div class="c-btn-group c-btn-group--column c-btn-group--max">
+      <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/gendergap'">0%</button>
       <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/gendergap'">15%</button>
       <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/gendergap'">25%</button>
-      <button class="c-btn c-btn--primary" onclick="location.href='http://localhost:3000/gendergap'">ei teenigi rohkem</button>
     </div>
   </div>
   <div class="c-content step" id="step-3-3">

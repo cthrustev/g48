@@ -9,12 +9,18 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-google-charts": "^3.0.13",
+    "react-icons": "^3.7.0",
+    "react-inlinesvg": "^0.8.4",
     "react-moment": "^0.9.2",
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
+    "react-step-wizard": "^5.3.0",
+    "react-stepzilla": "^6.0.0",
+    "react-svg": "^9.0.4",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "typescript": "^3.4.5"
   },
   "scripts": {
     "start": "react-scripts start",
